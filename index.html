@@ -126,12 +126,15 @@
             <a href="https://github.com/yonnn101/" target="_blank">GitHub</a>
             <a href="https://www.linkedin.com/in/yonas-sisay-55140a1bb/" target="_blank">LinkedIn</a>
         </div>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea rows="4" placeholder="Your Message"></textarea>
+        <div id="formResponse" class="form-response"></div>
+
+        <iframe name="hiddenFrame" style="display:none;"></iframe>
+        <form id="contactForm" action="send_email.php" method="POST" target="hiddenFrame">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea rows="4" name="message" placeholder="Your Message" required></textarea>
             <button type="submit">Collaborate</button>
-        </form>
+        </form>>
     </section>
     <script src="script.js"></script>
 </body>
