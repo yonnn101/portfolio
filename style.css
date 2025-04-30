@@ -399,3 +399,24 @@ p {
         width: 90%;
     }
 }
+/* Form response messages */
+.form-response {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 4px;
+    display: none;
+}
+
+.form-response.success {
+    display: block;
+    border: 1px solid #0f0;
+    background: rgba(0, 255, 0, 0.1);
+    color: #0f0;
+}
+
+.form-response.error {
+    display: block;
+    border: 1px solid #f00;
+    background: rgba(255, 0, 0, 0.1);
+    color: #f00;
+}
