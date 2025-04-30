@@ -8,10 +8,15 @@ const columns = canvas.width / fontSize;
 const drops = [];
 for (let x = 0; x < columns; x++) drops[x] = 1;
 function drawMatrix() {
-    ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+    // Increase this value to make the trails fade faster (more transparent)
+    ctx.fillStyle = "rgba(0, 0, 0, 0.15)"; // Changed from 0.05 to 0.15
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = "#0f0";
+    
+    // Reduce the opacity of the green characters
+    ctx.fillStyle = "rgba(0, 255, 0, 0.7)"; // Changed from #0f0 to semi-transparent
     ctx.font = fontSize + "px monospace";
+    
+    // Rest of the function remains the same
     for (let i = 0; i < drops.length; i++) {
         const text = letters.charAt(Math.floor(Math.random() * letters.length));
         ctx.fillText(text, i * fontSize, drops[i] * fontSize);
@@ -122,4 +127,19 @@ document.getElementById("demoBtn3").addEventListener("click", function () {
     setTimeout(function () {
         messageDiv.style.display = "none";
     }, 1000);
+});
+
+// Download Resume functionality
+document.getElementById("downloadResume").addEventListener("click", function(e) {
+    e.preventDefault();
+    
+    const resumeUrl = "https://drive.google.com/file/d/1sqxTCT9irldRPYcsfC4xedgLX2SVFhBh/view?usp=sharing";
+    
+    // Create a temporary link to trigger the download
+    const link = document.createElement("a");
+    link.href = resumeUrl;
+    link.download = "Yonas_Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
 });
