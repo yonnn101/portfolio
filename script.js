@@ -143,3 +143,20 @@ document.getElementById("downloadResume").addEventListener("click", function(e) 
     link.click();
     document.body.removeChild(link);
 });
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    // Don't prevent default - let it submit to the iframe
+    const formResponse = document.getElementById('formResponse');
+    formResponse.textContent = "Sending message...";
+    formResponse.className = 'form-response success';
+    
+    // Reset form after submission
+    setTimeout(() => {
+        this.reset();
+        formResponse.textContent = "Your message has been sent!";
+        
+        // Hide message after 5 seconds
+        setTimeout(() => {
+            formResponse.style.display = 'none';
+        }, 5000);
+    }, 1000);
+});
