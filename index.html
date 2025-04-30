@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CyberSec Researcher Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="hero">
+        <canvas id="matrixCanvas"></canvas>
+        <div class="hero-content">
+            <h1>Ethical HAcker | Penetration Tester</h1>
+            <p>If you can not do great things do small things in a great way</p>
+            <a href="#about" class="button">Start Exploring</a>
+        </div>
+    </section>
+    <section id="about">
+        <h2>About Me</h2>
+        <p class="hidden">Experienced penetration tester with a strong focus on securing real-world applications through
+            comprehensive vulnerability assessments and exploitation. Adept at identifying critical security flaws,
+            safeguarding APIs against OWASP Top 10 vulnerabilities, and performing both manual and automated testing.
+            Skilled in delivering clear, actionable reports and practical remediation strategies. Committed to
+            continuous learning and staying ahead of evolving cybersecurity threats to ensure resilient and secure
+            systems.</p>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="card-container hidden">
+            <div class="card hidden">
+                <h3>PyGuard: A Simple Python Honeypot </h3>
+                <p>Built a Python-based honeypot simulating SSH, HTTP, and SMTP services to capture unauthorized access
+                    attempts. Integrated logging and geolocation tracking to analyze attack origins and support threat
+                    detection efforts.</p>
+                <button id="demoBtn1">GitHub link</button>
+                <div id="message"
+                    style="display:none; text-align: center; color: #00ff00; font-size: 18px; margin-top: 20px;">
+                    URL copied to clipboard!
+                </div>
+            </div>
+            <div class="card hidden">
+                <h3>Project X: Cybersecurity Home Lab</h3>
+                <p>Set up Windows/Linux VMs to simulate enterprise environments. Performed penetration testing, AD
+                    exploitation, and implemented SIEM, IDS, and threat intelligence for monitoring and incident
+                    response.</p>
+                <button id="demoBtn2">link</button>
+                <div id="message2"
+                    style="display:none; text-align: center; color: #00ff00; font-size: 18px; margin-top: 20px;">
+                    URL copied to clipboard!
+                </div>
+            </div>
+            <div class="card hidden">
+                <h3>Malicious Browser extension</h3>
+                <p>Developed a malicious browser extension that silently captures login credentials and sends them to an
+                    attacker's server for security research and awareness, highlighting potential security risks and
+                    vulnerabilities.</p>
+                <button id="demoBtn3">GitHub link</button>
+                <div id="message3"
+                    style="display:none; text-align: center; color: #00ff00; font-size: 18px; margin-top: 20px;">
+                    URL copied to clipboard!
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="ctf">
+        <h2>Certifications</h2>
+        <div class="card-container hidden">
+            <div class="card hidden">
+                <h3>API Penetration Testing</h3>
+                <p>The API Penetration Testing course covers techniques to identify and secure vulnerabilities in APIs,
+                    focusing on OWASP Top 10 risks.</p>
+                <button
+                    onclick="window.open('https://www.credly.com/badges/63c63a05-e26f-4b56-9aee-07e2c7ef774c/', '_blank');">Cert</button>
+            </div>
+            <div class="card hidden">
+                <h3>official CC Course Completion</h3>
+                <p>An entry-level certification that validates foundational knowledge in cybersecurity, including
+                    security principles, network security, and incident response.
+                </p>
+                <button
+                    onclick="window.open('https://learn.isc2.org/d2l/awards/v1/9541/certificate/render/1096184', '_blank');">Cert</button>
+            </div>
+            <div class="card hidden">
+                <h3>CyberTalents Blue Team Scholarship</h3>
+                <p>The CyberTalents Blue Team Scholarship 2023 is a 3-month program that provides hands-on training in
+                    SOC analysis and threat hunting to develop essential blue team skills.</p>
+                <button
+                    onclick="window.open('https://drive.google.com/file/d/1mmME-bCFCTALEs5L1xqzuBLE3Rlm8iym/view', '_blank');">Cert</button>
+            </div>
+            <div class="card hidden">
+                <h3>IBM Introduction to Cybersecurity</h3>
+                <p> Understands key cybersecurity concepts like the CIA Triad, Access Management, and Incident Response.
+                </p>
+                <button
+                    onclick="window.open('https://www.credly.com/badges/a578c0b7-35c9-427a-a687-a871a06232c6/', '_blank');">Cert</button>
+            </div>
+            <div class="card hidden">
+                <h3>Completion of Internship</h3>
+                <p>Completion of an internship specializing in penetration testing and API security testing. </p>
+                <button
+                    onclick="window.open('https://drive.google.com/file/d/1lbXsJozZbbaYoN-cns8LbQPw82_bEsXc/view', '_blank');">Cert</button>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="social-links">
+            <a href="https://github.com/yonnn101/" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/yonas-sisay-55140a1bb/" target="_blank">LinkedIn</a>
+        </div>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="4" placeholder="Your Message"></textarea>
+            <button type="submit">Collaborate</button>
+        </form>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>
