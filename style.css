@@ -10,6 +10,7 @@ html {
 
 body {
     background: #000;
+    backdrop-filter: blur(6px);
     color: #0f0;
     font-family: 'Courier New', Courier, monospace;
     line-height: 1.6;
@@ -48,6 +49,18 @@ p {
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding-top: 80px;
+}
+
+#hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 0;
 }
 
 #matrixCanvas {
@@ -57,6 +70,7 @@ p {
     width: 100%;
     height: 100%;
     z-index: 0;
+    filter: blur(0px);
 }
 
 .hero-content {
@@ -89,6 +103,81 @@ p {
 .button:hover {
     box-shadow: 0 0 10px #0f0;
     background: rgba(0, 255, 0, 0.1);
+    text-decoration: none;
+}
+
+/* Header */
+#main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 255, 0, 0.3);
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo a {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #0f0;
+    text-shadow: 0 0 5px #0f0;
+    text-decoration: none;
+}
+
+/* Position nav more to the right */
+#main-header nav {
+    justify-self: end; /* Changed from start to end to move to the right */
+    margin-right: 30px;
+}
+
+#main-header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+#main-header nav ul li {
+    margin: 0 15px;
+}
+
+#main-header nav ul li a {
+    color: #0f0;
+    text-decoration: none;
+    transition: text-shadow 0.3s;
+    font-size: 1.1em;
+}
+
+#main-header nav ul li a:hover {
+    text-shadow: 0 0 8px #0f0;
+    text-decoration: none;
+}
+
+.resume-btn {
+    padding: 8px 16px;
+    border: 1px solid #0f0;
+    border-radius: 4px;
+    color: #0f0;
+    background: transparent;
+    cursor: pointer;
+    transition: box-shadow 0.3s, background 0.3s;
+    text-decoration: none;
+}
+
+.resume-btn:hover {
+    box-shadow: 0 0 10px #0f0;
+    background: rgba(0, 255, 0, 0.1);
+    text-decoration: none;
 }
 
 /* Sections */
@@ -280,6 +369,26 @@ p {
 }
 
 /* Responsive */
+@media (max-width: 768px) {
+    .header-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    #main-header nav {
+        justify-self: center;
+        margin-right: 0;
+    }
+    
+    #main-header nav ul {
+        margin: 10px 0;
+    }
+    
+    #main-header nav ul li {
+        margin: 0 8px;
+    }
+}
+
 @media (max-width: 600px) {
     .card-container {
         flex-direction: column;
